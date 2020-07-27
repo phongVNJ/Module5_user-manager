@@ -43,4 +43,13 @@ export class UserListComponent implements OnInit {
       return user.name.indexOf(keyword) != -1;
     });
   }
+  delete(id) {
+    let userDeleted = [];
+    this.users.map(user => {
+      if (user.id != id) {
+        userDeleted.push(user);
+      }
+    });
+    this.users = userDeleted;
+  }
 }
