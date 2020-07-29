@@ -6,10 +6,12 @@ import {IUser} from '../iuser';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-  title = 'Users';
-  users: IUser[] = [];
   constructor() {
   }
+  title = 'Users';
+  users: IUser[] = [];
+  // tslint:disable-next-line:typedef
+  listGroup: any;
   ngOnInit(): void {
     // this.userFilter = this.users;
     this.users = this.getUserList();
