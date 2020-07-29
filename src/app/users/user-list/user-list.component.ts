@@ -34,18 +34,23 @@ export class UserListComponent implements OnInit {
     ];
     return users;
   }
+  // tslint:disable-next-line:typedef
   search(event) {
-    let keyword = event.target.value;
+    const keyword = event.target.value;
     this.users = (keyword) ? this.filterByKeyword(keyword) : this.getUserList();
   }
+  // tslint:disable-next-line:typedef
   filterByKeyword(keyword) {
     return this.users.filter(user => {
+      // tslint:disable-next-line:triple-equals
       return user.name.indexOf(keyword) != -1;
     });
   }
+  // tslint:disable-next-line:typedef
   delete(id) {
-    let userDeleted = [];
+    const userDeleted = [];
     this.users.map(user => {
+      // tslint:disable-next-line:triple-equals
       if (user.id != id) {
         userDeleted.push(user);
       }
