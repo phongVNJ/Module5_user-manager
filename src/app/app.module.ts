@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './core/menu/menu.component';
 import { UserListComponent } from './users/user-list/user-list.component';
+import { SearchInputComponent } from './core/search-input/search-input.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { UserListComponent } from './users/user-list/user-list.component';
     AppComponent,
     MenuComponent,
     UserListComponent,
+    SearchInputComponent,
   ],
   imports: [
     BrowserModule,
